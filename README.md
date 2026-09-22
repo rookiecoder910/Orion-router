@@ -1,6 +1,7 @@
 # OrionRouter
 
 <div align="center">
+  <img src="./images/orion-dashboard.png" alt="OrionRouter Terminal Dashboard" width="800"/>
 
 ### Terminal AI Gateway & Token Optimization Engine
 
@@ -8,7 +9,27 @@
 
 Connect any AI coding tool (**Claude Code**, **Cursor**, **Codex**, **Copilot**, **Cline**, **OpenClaw**, **Zed**, and more) to 40+ AI providers through a single OpenAI-compatible gateway.
 
-[Features](#-key-features) • [Architecture](#-how-it-works) • [Quick Start](#-quick-start) • [Configuration](#-configuration) • [Supported Providers](#-supported-providers) • [API Reference](#-api-reference)
+[Screenshots](#-screenshots) • [Features](#-key-features) • [Architecture](#-how-it-works) • [Quick Start](#-quick-start) • [Configuration](#-configuration) • [Supported Providers](#-supported-providers) • [API Reference](#-api-reference)
+
+</div>
+
+---
+
+## 📸 Screenshots
+
+<div align="center">
+
+### Terminal Dashboard (Overview)
+<img src="./images/orion-dashboard.png" alt="OrionRouter Dashboard" width="750"/>
+
+### Usage & Token Analytics
+<img src="./images/orion-usage.png" alt="OrionRouter Usage & Analytics" width="750"/>
+
+### Providers & Fallback Nodes
+<img src="./images/orion-providers.png" alt="OrionRouter Providers" width="750"/>
+
+### Access Control & Login Workstation
+<img src="./images/orion-login.png" alt="OrionRouter Login" width="750"/>
 
 </div>
 
