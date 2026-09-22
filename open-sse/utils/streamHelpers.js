@@ -9,7 +9,7 @@ export function parseSSELine(line, format = null) {
   if (!line) return null;
 
   // NDJSON format (Ollama): raw JSON lines without "data:" prefix
-  if (format === FORMATS.OLLAMA) {
+  if (format === FORMATS.OLLAMA || line.charCodeAt(0) === 123) {
     const trimmed = line.trim();
     if (trimmed.startsWith("{")) {
       try {

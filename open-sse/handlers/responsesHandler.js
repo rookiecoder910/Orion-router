@@ -79,14 +79,12 @@ export async function handleResponsesCore({ body, modelInfo, credentials, log, o
     }
   }
 
-  // Case 2: Client wants streaming, got SSE - transform it
+  // Case 2: Client wants streaming, got SSE
   if (clientRequestedStreaming && contentType.includes("text/event-stream")) {
-    const transformStream = createResponsesApiTransformStream(null);
-    const transformedBody = response.body.pipeThrough(transformStream);
-
+    // ponytail: handleChatCore with sourceFormatOverride="openai-responses" already outputs Responses API SSE
     return {
       success: true,
-      response: new Response(transformedBody, {
+      response: new Response(response.body, {
         status: 200,
         headers: { ...SSE_HEADERS_CORS }
       })

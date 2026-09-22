@@ -16,7 +16,11 @@ async function setupDb() {
   return {
     createProviderNode,
     getModelInfo,
-    cleanup() {
+    async cleanup() {
+      try {
+        const { closeDb } = await import("@/lib/db/index.js");
+        await closeDb?.();
+      } catch {}
       fs.rmSync(tempDir, { recursive: true, force: true });
     },
   };

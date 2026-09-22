@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import PropTypes from "prop-types";
 import { getProviderIconSrc, markProviderIconMissing } from "@/shared/utils/providerIcon";
 
 function resolveSrc(src, providerId) {
@@ -59,12 +58,3 @@ export default function ProviderIcon({
   );
 }
 
-ProviderIcon.propTypes = {
-  src: PropTypes.string,
-  providerId: PropTypes.string,
-  alt: PropTypes.string,
-  size: PropTypes.number,
-  className: PropTypes.string,
-  fallbackText: PropTypes.string,
-  fallbackColor: PropTypes.string,
-};

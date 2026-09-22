@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { Button, Badge, Input, Modal, Select } from "@/shared/components";
 
 export default function EditCompatibleNodeModal({ isOpen, node, onSave, onClose, isAnthropic }) {
@@ -146,16 +145,3 @@ export default function EditCompatibleNodeModal({ isOpen, node, onSave, onClose,
   );
 }
 
-EditCompatibleNodeModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  node: PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    prefix: PropTypes.string,
-    apiType: PropTypes.string,
-    baseUrl: PropTypes.string,
-  }),
-  onSave: PropTypes.func.isRequired,
-  onClose: PropTypes.func.isRequired,
-  isAnthropic: PropTypes.bool,
-};

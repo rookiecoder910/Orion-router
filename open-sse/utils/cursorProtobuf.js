@@ -3,7 +3,7 @@
  * Implements ConnectRPC protobuf wire format for Cursor API
  */
 
-import { v4 as uuidv4 } from "uuid";
+import { randomUUID as uuidv4 } from "node:crypto";
 import zlib from "zlib";
 
 const DEBUG = process.env.CURSOR_PROTOBUF_DEBUG === "1";

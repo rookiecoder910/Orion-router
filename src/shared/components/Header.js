@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import PropTypes from "prop-types";
 import ProviderIcon from "@/shared/components/ProviderIcon";
 import HeaderMenu from "@/shared/components/HeaderMenu";
 import HeaderLanguage from "@/shared/components/HeaderLanguage";
@@ -299,7 +298,3 @@ function HeaderSearch() {
   );
 }
 
-Header.propTypes = {
-  onMenuClick: PropTypes.func,
-  showMenuButton: PropTypes.bool,
-};

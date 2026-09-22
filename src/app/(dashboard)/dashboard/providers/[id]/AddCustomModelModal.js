@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { Button, Modal, Toggle } from "@/shared/components";
 import { CAPACITY_META } from "@/shared/constants/models";
 
@@ -136,10 +135,3 @@ export default function AddCustomModelModal({ isOpen, providerAlias, providerDis
   );
 }
 
-AddCustomModelModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  providerAlias: PropTypes.string.isRequired,
-  providerDisplayAlias: PropTypes.string.isRequired,
-  onSave: PropTypes.func.isRequired,
-  onClose: PropTypes.func.isRequired,
-};

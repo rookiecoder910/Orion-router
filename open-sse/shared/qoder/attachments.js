@@ -12,8 +12,7 @@
  *   3. Caps leftover data-URIs so the chat JSON stays small.
  */
 
-import { createHash } from "crypto";
-import { v4 as uuidv4 } from "uuid";
+import { createHash, randomUUID as uuidv4 } from "node:crypto";
 
 import { proxyAwareFetch } from "../../utils/proxyFetch.js";
 import { parseDataUri } from "../../translator/concerns/image.js";

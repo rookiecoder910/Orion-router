@@ -394,6 +394,9 @@ export function createSSEStream(options = {}) {
             if (buffer.startsWith("data:") && !buffer.startsWith("data: ")) {
               output = "data: " + buffer.slice(5);
             }
+            if (!output.endsWith("\n\n")) {
+              output += output.endsWith("\n") ? "\n" : "\n\n";
+            }
             reqLogger?.appendConvertedChunk?.(output);
             controller.enqueue(sharedEncoder.encode(output));
           }

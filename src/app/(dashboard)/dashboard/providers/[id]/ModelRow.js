@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { CapacityBadges } from "@/shared/components";
 
 export default function ModelRow({ model, fullModel, alias, copied, onCopy, testStatus, isCustom, isFree, onDeleteAlias, onTest, isTesting, onDisable, caps, thinkingSuffix }) {
@@ -82,21 +81,3 @@ export default function ModelRow({ model, fullModel, alias, copied, onCopy, test
   );
 }
 
-ModelRow.propTypes = {
-  model: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-  }).isRequired,
-  fullModel: PropTypes.string.isRequired,
-  alias: PropTypes.string,
-  copied: PropTypes.string,
-  onCopy: PropTypes.func.isRequired,
-  testStatus: PropTypes.oneOf(["ok", "error"]),
-  isCustom: PropTypes.bool,
-  isFree: PropTypes.bool,
-  onDeleteAlias: PropTypes.func,
-  onTest: PropTypes.func,
-  isTesting: PropTypes.bool,
-  onDisable: PropTypes.func,
-  caps: PropTypes.object,
-  thinkingSuffix: PropTypes.string,
-};

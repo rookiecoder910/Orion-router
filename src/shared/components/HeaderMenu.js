@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import PropTypes from "prop-types";
 import { useTheme } from "@/shared/hooks/useTheme";
 import ChangelogModal from "./ChangelogModal";
 import { ConfirmModal } from "./Modal";
@@ -23,13 +22,6 @@ function MenuItem({ icon, label, onClick, trailing, danger }) {
   );
 }
 
-MenuItem.propTypes = {
-  icon: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  trailing: PropTypes.node,
-  danger: PropTypes.bool,
-};
 
 export default function HeaderMenu({ onLogout }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -117,6 +109,3 @@ export default function HeaderMenu({ onLogout }) {
   );
 }
 
-HeaderMenu.propTypes = {
-  onLogout: PropTypes.func.isRequired,
-};

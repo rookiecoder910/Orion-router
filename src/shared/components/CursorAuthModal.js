@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { Modal, Button, Input } from "@/shared/components";
 
 /**
@@ -205,8 +204,3 @@ export default function CursorAuthModal({ isOpen, onSuccess, onClose }) {
   );
 }
 
-CursorAuthModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onSuccess: PropTypes.func,
-  onClose: PropTypes.func.isRequired,
-};

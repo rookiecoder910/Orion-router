@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import PropTypes from "prop-types";
 import {
   AreaChart,
   Area,
@@ -139,6 +138,3 @@ export default function UsageChart({ period = "7d" }) {
   );
 }
 
-UsageChart.propTypes = {
-  period: PropTypes.string,
-};

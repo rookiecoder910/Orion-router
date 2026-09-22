@@ -19,7 +19,11 @@ export async function dedupRefresh(provider, oldToken, fn, log) {
   const promise = (async () => {
     try {
       const result = await fn();
-      refreshDedupCache.set(key, { result, expiresAt: Date.now() + REFRESH_RESULT_TTL_MS });
+      if (result) {
+        refreshDedupCache.set(key, { result, expiresAt: Date.now() + REFRESH_RESULT_TTL_MS });
+      } else {
+        refreshDedupCache.delete(key);
+      }
       return result;
     } catch (err) {
       refreshDedupCache.delete(key);

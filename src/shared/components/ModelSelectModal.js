@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import PropTypes from "prop-types";
 import Modal from "./Modal";
 import ProviderIcon from "./ProviderIcon";
 import CapacityBadges from "./CapacityBadges";
@@ -638,20 +637,3 @@ export default function ModelSelectModal({
   );
 }
 
-ModelSelectModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  onSelect: PropTypes.func.isRequired,
-  onDeselect: PropTypes.func,
-  selectedModel: PropTypes.string,
-  activeProviders: PropTypes.arrayOf(
-    PropTypes.shape({
-      provider: PropTypes.string.isRequired,
-    })
-  ),
-  title: PropTypes.string,
-  modelAliases: PropTypes.object,
-  kindFilter: PropTypes.string,
-  addedModelValues: PropTypes.arrayOf(PropTypes.string),
-  closeOnSelect: PropTypes.bool,
-};

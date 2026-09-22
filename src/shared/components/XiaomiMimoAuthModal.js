@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { Modal, Button } from "@/shared/components";
 
 /**
@@ -269,8 +268,3 @@ export default function XiaomiMimoAuthModal({ isOpen, onSuccess, onClose }) {
   );
 }
 
-XiaomiMimoAuthModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onSuccess: PropTypes.func,
-  onClose: PropTypes.func.isRequired,
-};

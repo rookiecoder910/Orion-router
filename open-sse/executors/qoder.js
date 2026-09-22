@@ -22,7 +22,7 @@
 
 import { qoderEncodeBody } from "../shared/qoder/encoding.js";
 import { buildCosyHeaders } from "../shared/qoder/cosy.js";
-import { v4 as uuidv4 } from "uuid";
+import { randomUUID as uuidv4 } from "node:crypto";
 import { createHash } from "crypto";
 
 import { BaseExecutor } from "./base.js";

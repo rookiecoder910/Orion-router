@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import PropTypes from "prop-types";
 import { Modal, Button, Input } from "@/shared/components";
 
 /**
@@ -125,8 +124,3 @@ export default function IFlowCookieModal({ isOpen, onSuccess, onClose }) {
   );
 }
 
-IFlowCookieModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onSuccess: PropTypes.func,
-  onClose: PropTypes.func,
-};

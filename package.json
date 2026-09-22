@@ -4,6 +4,7 @@
   "description": "9Router web dashboard",
   "private": true,
   "scripts": {
+    "test": "vitest run --config tests/vitest.config.js",
     "dev": "next dev --port 20127",
     "dev:webpack": "next dev --webpack --port 20127",
     "build": "next build --webpack",
@@ -38,17 +39,12 @@
     "node-forge": "^1.3.3",
     "node-machine-id": "^1.1.12",
     "open": "^11.0.0",
-    "ora": "^9.1.0",
-    "prop-types": "^15.8.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-is": "^16.13.1",
     "recharts": "^3.7.0",
-    "selfsigned": "^5.5.0",
     "socks-proxy-agent": "^8.0.5",
     "sql.js": "^1.14.1",
     "undici": "^7.19.2",
-    "uuid": "^13.0.0",
     "zustand": "^5.0.10"
   },
   "optionalDependencies": {

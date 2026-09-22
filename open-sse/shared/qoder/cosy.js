@@ -13,8 +13,7 @@
  *   Cosy-Machineid, not Cosy-MachineID.
  */
 
-import crypto from "crypto";
-import { v4 as uuidv4 } from "uuid";
+import crypto, { randomUUID as uuidv4 } from "crypto";
 
 import {
   QODER_CLIENT_TYPE,

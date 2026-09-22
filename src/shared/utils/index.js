@@ -3,13 +3,10 @@ export { cn } from "./cn";
 export * as api from "./api";
 export { getProviderIconSrc, markProviderIconMissing, resolveProviderIconId } from "./providerIcon";
 
-import { v4 as uuidv4 } from "uuid";
-
 /**
  * Generate unique ID (UUID v4)
- * @returns {string} UUID v4 string
  */
-export const generateId = uuidv4;
+export const generateId = () => crypto.randomUUID();
 
 /**
  * Extract error code from error message (401, 429, 503...)

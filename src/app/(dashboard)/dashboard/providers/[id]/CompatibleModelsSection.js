@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import PropTypes from "prop-types";
 import { Button } from "@/shared/components";
 import { getProviderCustomModelRows } from "@/shared/utils/providerCustomModels";
 function CompatibleModelRow({ modelId, fullModel, copied, onCopy, onDeleteAlias, onTest, testStatus, isTesting }) {
@@ -214,19 +213,3 @@ export default function CompatibleModelsSection({ providerStorageAlias, provider
   );
 }
 
-CompatibleModelsSection.propTypes = {
-  providerStorageAlias: PropTypes.string.isRequired,
-  providerDisplayAlias: PropTypes.string.isRequired,
-  modelAliases: PropTypes.object.isRequired,
-  customModels: PropTypes.arrayOf(PropTypes.object),
-  copied: PropTypes.string,
-  onCopy: PropTypes.func.isRequired,
-  onDeleteAlias: PropTypes.func.isRequired,
-  onAddCustomModel: PropTypes.func.isRequired,
-  onDeleteCustomModel: PropTypes.func.isRequired,
-  connections: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    isActive: PropTypes.bool,
-  })).isRequired,
-  isAnthropic: PropTypes.bool,
-};

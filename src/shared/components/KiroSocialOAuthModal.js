@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import PropTypes from "prop-types";
 import { Modal, Button, Input } from "@/shared/components";
 import { useCopyToClipboard } from "@/shared/hooks/useCopyToClipboard";
 
@@ -206,9 +205,3 @@ export default function KiroSocialOAuthModal({ isOpen, provider, onSuccess, onCl
   );
 }
 
-KiroSocialOAuthModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  provider: PropTypes.oneOf(["google", "github"]).isRequired,
-  onSuccess: PropTypes.func,
-  onClose: PropTypes.func.isRequired,
-};

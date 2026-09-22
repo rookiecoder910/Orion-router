@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import PropTypes from "prop-types";
 import OAuthModal from "./OAuthModal";
 import KiroAuthModal from "./KiroAuthModal";
 import KiroSocialOAuthModal from "./KiroSocialOAuthModal";
@@ -93,11 +92,3 @@ export default function KiroOAuthWrapper({ isOpen, providerInfo, onSuccess, onCl
   return null;
 }
 
-KiroOAuthWrapper.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  providerInfo: PropTypes.shape({
-    name: PropTypes.string,
-  }),
-  onSuccess: PropTypes.func,
-  onClose: PropTypes.func.isRequired,
-};

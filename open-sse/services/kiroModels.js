@@ -19,8 +19,7 @@
  * "format of value 'os/win/10 lang/js ...' is invalid").
  */
 
-import { v4 as uuidv4 } from "uuid";
-import { createHash } from "crypto";
+import { randomUUID as uuidv4, createHash } from "node:crypto";
 import { refreshKiroToken } from "./tokenRefresh.js";
 
 const KIRO_RUNTIME_SDK_VERSION = "1.0.0";

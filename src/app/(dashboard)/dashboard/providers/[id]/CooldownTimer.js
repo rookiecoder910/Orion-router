@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 
 export default function CooldownTimer({ until }) {
   const [remaining, setRemaining] = useState("");
@@ -37,6 +36,3 @@ export default function CooldownTimer({ until }) {
   );
 }
 
-CooldownTimer.propTypes = {
-  until: PropTypes.string.isRequired,
-};

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { Modal, Button, Input } from "@/shared/components";
 
 /**
@@ -588,8 +587,3 @@ export default function KiroAuthModal({ isOpen, onMethodSelect, onClose }) {
   );
 }
 
-KiroAuthModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onMethodSelect: PropTypes.func.isRequired,
-  onClose: PropTypes.func.isRequired,
-};

@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import Card from "./Card";
 import Select from "./Select";
 import Badge from "./Badge";
@@ -129,6 +128,3 @@ export default function NoAuthProxyCard({ providerId }) {
   );
 }
 
-NoAuthProxyCard.propTypes = {
-  providerId: PropTypes.string.isRequired,
-};

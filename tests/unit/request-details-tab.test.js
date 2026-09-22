@@ -28,7 +28,8 @@ beforeAll(async () => {
   adapter = await getAdapter();
 });
 
-afterAll(() => {
+afterAll(async () => {
+  if (db?.closeDb) await db.closeDb();
   if (tempDir) fs.rmSync(tempDir, { recursive: true, force: true });
   if (originalDataDir === undefined) delete process.env.DATA_DIR;
   else process.env.DATA_DIR = originalDataDir;

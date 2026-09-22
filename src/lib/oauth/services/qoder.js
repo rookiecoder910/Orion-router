@@ -3,8 +3,7 @@ import {
   QODER_LOGIN_URL,
   QODER_USERINFO_URL,
 } from "../../qoder/constants.js";
-import crypto from "crypto";
-import { v4 as uuidv4 } from "uuid";
+import crypto, { randomUUID as uuidv4 } from "crypto";
 
 /**
  * Qoder OAuth Service

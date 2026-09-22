@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState, useEffect, useCallback, useRef } from "react";
-import PropTypes from "prop-types";
 import {
   ReactFlow,
   Handle,
@@ -90,9 +89,6 @@ function ProviderNode({ data }) {
   );
 }
 
-ProviderNode.propTypes = {
-  data: PropTypes.object.isRequired,
-};
 
 // Center 9Router node — pulse/glow on card only (no expanding rings)
 function RouterNode({ data }) {
@@ -129,9 +125,6 @@ function RouterNode({ data }) {
   );
 }
 
-RouterNode.propTypes = {
-  data: PropTypes.object.isRequired,
-};
 
 // Active: electric kame beam (multi-layer stroke + sparks). Idle/last/error: solid BaseEdge.
 function TopologyEdge({
@@ -244,17 +237,6 @@ function TopologyEdge({
   );
 }
 
-TopologyEdge.propTypes = {
-  id: PropTypes.string,
-  sourceX: PropTypes.number,
-  sourceY: PropTypes.number,
-  targetX: PropTypes.number,
-  targetY: PropTypes.number,
-  sourcePosition: PropTypes.string,
-  targetPosition: PropTypes.string,
-  style: PropTypes.object,
-  data: PropTypes.object,
-};
 
 const nodeTypes = { provider: ProviderNode, router: RouterNode };
 const edgeTypes = { topology: TopologyEdge };
@@ -471,17 +453,3 @@ export default function ProviderTopology({ providers = [], activeRequests = [], 
   );
 }
 
-ProviderTopology.propTypes = {
-  providers: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    provider: PropTypes.string,
-    name: PropTypes.string,
-  })),
-  activeRequests: PropTypes.arrayOf(PropTypes.shape({
-    provider: PropTypes.string,
-    model: PropTypes.string,
-    account: PropTypes.string,
-  })),
-  lastProvider: PropTypes.string,
-  errorProvider: PropTypes.string,
-};

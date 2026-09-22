@@ -51,7 +51,11 @@ export function filterToOpenAIFormat(body, opts = {}) {
       
       // If all content was filtered, add empty text
       if (filteredContent.length === 0) {
-        filteredContent.push({ type: OPENAI_BLOCK.TEXT, text: "" });
+        return { ...msg, content: "" };
+      }
+
+      if (filteredContent.every((b) => b.type === OPENAI_BLOCK.TEXT)) {
+        return { ...msg, content: filteredContent.map((b) => b.text).join("\n") };
       }
       
       return { ...msg, content: filteredContent };

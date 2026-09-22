@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import PropTypes from "prop-types";
 import { Button, Modal } from "@/shared/components";
 import { translate } from "@/i18n/runtime";
 
@@ -143,8 +142,3 @@ export default function BulkImportCodexModal({ isOpen, onClose, onSuccess }) {
   );
 }
 
-BulkImportCodexModal.propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  onSuccess: PropTypes.func,
-};

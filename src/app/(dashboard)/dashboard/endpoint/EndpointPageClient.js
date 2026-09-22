@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import PropTypes from "prop-types";
 import { Card, Button, Input, Modal, CardSkeleton, Toggle, ConfirmModal } from "@/shared/components";
 import { useCopyToClipboard } from "@/shared/hooks/useCopyToClipboard";
 import {
@@ -1305,6 +1304,3 @@ export default function APIPageClient({ machineId }) {
 }
 
 
-APIPageClient.propTypes = {
-  machineId: PropTypes.string.isRequired,
-};

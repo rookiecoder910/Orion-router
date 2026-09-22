@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import PropTypes from "prop-types";
 import {
   BarChart,
   Bar,
@@ -109,6 +108,3 @@ export default function TopModelsChart({ byModel }) {
   );
 }
 
-TopModelsChart.propTypes = {
-  byModel: PropTypes.object,
-};

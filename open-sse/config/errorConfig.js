@@ -71,7 +71,7 @@ export const ERROR_RULES = [
   { status: 401, cooldownMs: COOLDOWN.long },
   { status: 402, cooldownMs: COOLDOWN.long },
   { status: 403, cooldownMs: COOLDOWN.long },
-  { status: 404, cooldownMs: COOLDOWN.long },
+  // ponytail: 404 is a client model/path error; do not lock out provider connection
   { status: 429, backoff: true },
 ];
 

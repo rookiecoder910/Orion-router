@@ -4,7 +4,7 @@
  */
 import { register } from "../index.js";
 import { FORMATS } from "../formats.js";
-import { v4 as uuidv4 } from "uuid";
+import { randomUUID as uuidv4 } from "node:crypto";
 import { applyKiroSessionReplay } from "../../utils/kiroSessionReplay.js";
 import { resolveContinuationId, resolveSessionIdentity } from "../../utils/sessionManager.js";
 import {
@@ -434,6 +434,14 @@ export function openaiToKiroRequest(model, body, stream, credentials) {
   Object.defineProperty(payload, "_kiroUpstreamModel", {
     value: upstreamModel,
     enumerable: false
+  });
+
+  // ponytail: non-enumerable systemPrompt so internal tests/inspection work without serializing to CodeWhisperer wire
+  Object.defineProperty(payload, "systemPrompt", {
+    value: systemPrompt,
+    enumerable: false,
+    writable: true,
+    configurable: true
   });
 
   // Kiro tool specs get sanitized names (`mcp__a__b` → `mcp_a_b`); keep the
