@@ -1,15 +1,17 @@
-# OrionRouter
-
 <div align="center">
+  <img src="./images/orion-logo.png" alt="OrionRouter Logo" width="150"/>
+
+  # OrionRouter
+  ### Terminal AI Gateway & Token Optimization Engine
+
+  **Save 20–40% tokens with intelligent compression, multi-provider fallback, and unified API routing for AI coding agents.**
+
+  Connect any AI coding tool (**Claude Code**, **Cursor**, **Codex**, **Copilot**, **Cline**, **OpenClaw**, **Zed**, and more) to 40+ AI providers through a single OpenAI-compatible gateway.
+
+  [Screenshots](#-screenshots) • [Features](#-key-features) • [Architecture](#-how-it-works) • [Quick Start](#-quick-start) • [Configuration](#-configuration) • [Supported Providers](#-supported-providers) • [API Reference](#-api-reference)
+
+  <br/>
   <img src="./images/orion-dashboard.png" alt="OrionRouter Terminal Dashboard" width="800"/>
-
-### Terminal AI Gateway & Token Optimization Engine
-
-**Save 20–40% tokens with intelligent compression, multi-provider fallback, and unified API routing for AI coding agents.**
-
-Connect any AI coding tool (**Claude Code**, **Cursor**, **Codex**, **Copilot**, **Cline**, **OpenClaw**, **Zed**, and more) to 40+ AI providers through a single OpenAI-compatible gateway.
-
-[Screenshots](#-screenshots) • [Features](#-key-features) • [Architecture](#-how-it-works) • [Quick Start](#-quick-start) • [Configuration](#-configuration) • [Supported Providers](#-supported-providers) • [API Reference](#-api-reference)
 
 </div>
 
