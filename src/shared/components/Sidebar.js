@@ -118,7 +118,10 @@ export default function Sidebar({ onClose }) {
  \\___/|_| \\_\\___\\___/|_| \\_|`}
             </pre>
             <div className="mt-2 flex items-center justify-between text-[11px] border-t border-border/40 pt-1.5 text-text-muted">
-              <span className="font-bold text-primary">// ORION ROUTER</span>
+              <div className="flex items-center gap-1.5">
+                <img src="/logo.png" alt="Orion" className="size-4 object-contain" />
+                <span className="font-bold text-primary">// ORION ROUTER</span>
+              </div>
               <span className="text-text-muted">v{APP_CONFIG.version}</span>
             </div>
           </Link>

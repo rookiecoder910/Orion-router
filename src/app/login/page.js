@@ -156,7 +156,8 @@ export default function LoginPage() {
 
       <div className="relative z-10 w-full max-w-lg">
         {/* Terminal Header & ASCII Art */}
-        <div className="mb-4 text-center">
+        <div className="mb-4 text-center flex flex-col items-center">
+          <img src="/logo.png" alt="OrionRouter" className="size-12 object-contain mb-3" />
           <pre className="text-[10px] sm:text-xs leading-[11px] sm:leading-[13px] text-primary terminal-glow inline-block whitespace-pre font-mono">
 {`  ___  ____  ___ ___  _   _ 
  / _ \\|  _ \\|_ _/ _ \\| \\ | |

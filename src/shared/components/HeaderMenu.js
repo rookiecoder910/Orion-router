@@ -99,7 +99,7 @@ export default function HeaderMenu({ onLogout }) {
         onClose={() => setShutdownOpen(false)}
         onConfirm={handleShutdown}
         title="SHUTDOWN DAEMON"
-        message="Terminate 9Router routing daemon? All active proxies and CLI tools will be halted."
+        message="Terminate OrionRouter routing daemon? All active proxies and CLI tools will be halted."
         confirmText="HALT NOW"
         cancelText="ABORT"
         variant="danger"
